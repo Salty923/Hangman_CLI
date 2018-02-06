@@ -1,0 +1,23 @@
+{
+  "name": "Hangman_CLI",
+  "version": "1.0.0",
+  "description": "Build Hangman with CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salty923/Hangman_CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salty923/Hangman_CLI/issues"
+  },
+  "homepage": "https://github.com/Salty923/Hangman_CLI#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
