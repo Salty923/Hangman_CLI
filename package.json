@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Salty923/Hangman_CLI#readme",
   "dependencies": {
+    "inquirer": "^5.1.0",
     "prompt": "^1.0.0"
   }
 }
