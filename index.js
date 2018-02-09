@@ -1,6 +1,56 @@
 
+var inquirer = require("inquirer");
+//var letter = require("letter");
+//var word = require("word");
 
-//Show user the spaces for the random word chosen
+
+//start the game!
+game();
+
+
+
+//ask the user if they are ready to play
+function game() {
+    inquirer.prompt([
+        {
+            name: "play",
+            message: "Are you ready to play?",
+            choices: ["yes", "no"],
+            type: "rawlist"
+        }
+    ]).then(function (response) {
+        if (response.play === "no") {
+            annoy();
+        }else{
+            //Show user the spaces for the random word chosen
+        }
+    });
+}
+
+
+
+    
+
+
+//repeat this function until user agrees to play!
+function annoy() {
+        inquirer.prompt([
+            {
+                name: "now",
+                message: "How about now?",
+                choices: ["yes", "no"],
+                type: "rawlist"
+            }
+        ]).then(function (response) {
+            if (response.now === "no") {
+                annoy();
+            }
+        })
+}
+
+
+
+
 
 //ask the user to guess a letter
 
