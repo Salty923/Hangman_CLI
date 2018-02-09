@@ -3,6 +3,8 @@ var inquirer = require("inquirer");
 //var letter = require("letter");
 //var word = require("word");
 
+let userGuess =[];
+
 
 //start the game!
 game();
