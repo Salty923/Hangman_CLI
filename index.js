@@ -1,9 +1,19 @@
 
 var inquirer = require("inquirer");
-//var letter = require("letter");
-//var word = require("word");
+var word = require("word");
+
+
+
+
+//Word to guess
+const allWords = ["python", "django", "node", "css", "html", "ruby", "rails", "vue", "react", "bootstrap", "javascript", "jquery", "mongo"];
+
+//Select Random Word
+var answer = allWords[Math.floor(Math.random() * allWords.length) + 1];
+
 
 let userGuess =[];
+let userTurns = 10;
 
 
 //start the game!
@@ -23,15 +33,13 @@ function game() {
     ]).then(function (response) {
         if (response.play === "no") {
             annoy();
-        }else{
-            //Show user the spaces for the random word chosen
+        }else{ 
+            play();
         }
     });
 }
 
 
-
-    
 
 
 //repeat this function until user agrees to play!
@@ -46,7 +54,7 @@ function annoy() {
         ]).then(function (response) {
             if (response.now === "no") {
                 annoy();
-            }
+            }play();
         })
 }
 
@@ -55,6 +63,22 @@ function annoy() {
 
 
 //ask the user to guess a letter
+function play() {
+    inquirer.prompt([
+        {
+            name: "userGuess",
+            message: "Choose a letter",
+            type: "input"
+        }
+    ]).then(function (response) {
+        //run word function from word.js
+        word();
+    })
+}
+
+
+
+
 
 //check to see if letter has been guessed already
 

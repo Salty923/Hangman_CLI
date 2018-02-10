@@ -1,10 +1,23 @@
-//Word to guess
-const guesses = ["python", "django", "node", "css", "html", "ruby", "rails", "vue", "react", "bootstrap", "javascript", "jquery", "mongo"];
 
 
-//Select Random Word
-var guess = guesses[Math.floor(Math.random() * guesses.length) + 1];
+// create constructor for letters guessed
+function Letter(letter,guessed) {
+    this.letter = letter,
+    this.guessed = false;
+    this.update = function () {
+        if (guessed = letter) {
+            this.guessed = true;
+            console.log("YOU RIGHT!!! YOU RIGHT!!");
+            return this.letter;
+        } else {
+            console.log("NOPE! Guess again!")
+            return "_"
+        }
+    }
+}
+
+
 
 
 //export guess for use in word.js
-module.exports = guess;
+module.exports = Letter;
