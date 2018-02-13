@@ -1,12 +1,12 @@
 
 
 // create constructor for letters guessed
-function Letter(letter,guessed) {
+function Letter(userLetter) {
     this.letter = letter,
-    this.guessed = false;
+    this.match = false;
     this.update = function () {
-        if (guessed = letter) {
-            this.guessed = true;
+        if (userLetter = letter) {
+            this.match = true;
             console.log("YOU RIGHT!!! YOU RIGHT!!");
             return this.letter;
         } else {

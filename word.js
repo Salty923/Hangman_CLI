@@ -4,11 +4,10 @@ var guess = require("./letter.js");
 function Word(answer) {
     this.answer = answer;
     this.letters = [];
-    this.allLetters = function name(params) {
-          
-    }
-    for (var i = 0; i < answer.length; i++) {
-        this.answer.push(answer[i]);
+    this.allLetters = function name() {
+        for (var i = 0; i < answer.length; i++) {
+            this.letters.push(answer[i]);
+        }
     }
 }
 
