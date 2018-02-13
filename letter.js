@@ -2,15 +2,13 @@
 
 // create constructor for letters guessed
 function Letter(userLetter) {
-    this.letter = letter,
+    this.answerLetter = answerLetter,
     this.match = false;
     this.update = function () {
-        if (userLetter = letter) {
+        if (userLetter = this.answerLetter) {
             this.match = true;
-            console.log("YOU RIGHT!!! YOU RIGHT!!");
-            return this.letter;
+            return this.answerLetter;
         } else {
-            console.log("NOPE! Guess again!")
             return "_"
         }
     }

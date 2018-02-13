@@ -1,6 +1,6 @@
 
 var inquirer = require("inquirer");
-var word = require("word");
+var word = require("./word");
 
 
 
@@ -64,6 +64,7 @@ function annoy() {
 
 //ask the user to guess a letter
 function play() {
+    
     inquirer.prompt([
         {
             name: "userGuess",
@@ -72,7 +73,7 @@ function play() {
         }
     ]).then(function (response) {
         //run word function from word.js
-        word();
+        word(answer);
     })
 }
 
